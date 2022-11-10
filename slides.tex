@@ -104,27 +104,46 @@
 
 % introduction
 \begin{frame}{Who am I?}
-\begin{itemize}
-	\item Lijun Zhu, Ph.D.
+	\begin{columns}
+		\begin{column}{0.8\linewidth}
 		\begin{itemize}
-			\item Focus on Machine Learning, Data Science, and Signal Processing
-			\item Lead a team of 10-20 DS, DE, MLE, and SWE
-			\item Experience in internship, Co-op, IC, and PM
-		\end{itemize}
-	\item Sam's Club Data Science and Engineering
-		\begin{itemize}
-			\item A centralized data science / machine learning group
-			\item Full stack data scientists from product concept to production
-			\item Wide range of enterprice DS products
+			\item Lijun Zhu, Ph.D.
 				\begin{itemize}
-					\item Time series forecast
-					\item Optimization
-					\item NLP chat bot and text analysis
-					\item Fraud detection
+					\item Machine Learning, Data Science, and Signal Processing
+					\item Leading a team of 10-20 DS, DE, MLE, and SWE
+					\item Previous experience in internship, Co-op, IC, and PM
+				\end{itemize}
+			\item Sam's Club Data Science and Engineering
+				\begin{itemize}
+					\item A centralized data science / machine learning group
+					\item Full stack data scientists from product concept to production
+					\item Impactful product and initiatives spanning all field in data science
+						\begin{itemize}
+							\item Time series forecast
+							\item Optimization
+							\item NLP chat bot and text analysis
+							\item Fraud detection
+						\end{itemize}
+				\end{itemize}
+			\item Full time and internship opportunities every year
+				\begin{itemize}
+					\item Organization trippled in size for the past three years
 				\end{itemize}
 		\end{itemize}
-	\item Full time and internship opportunities every year
-\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.2\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{lijun}
+			\end{figure}
+			\vspace{2mm}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{sams_logo}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -137,6 +156,68 @@
 %-------------------------------------------------------------------------------
 \section{Time series analysis}
 
+\begin{frame}
+	\frametitle{Time Series is Ubiquitous}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{itemize}
+				\item Time series record a history of states
+					\begin{itemize}
+						\item price hisory
+						\item sales records
+						\item sensor signal
+						\item operational log
+					\end{itemize}
+				\item History is useful if it helps us make decisions
+				\item Decision leads to business impact
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.6\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{time_series}
+				\tiny{Image courtesy of \cite{wen2022robust}.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Typical Applications on Time Series}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{time_series_applications}
+		\tiny{Image courtesy of \cite{wen2022robust}.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{From Forecast to Decision}
+	\begin{itemize}
+		\item Allocate resource based on demand forecast
+		\item Peak demand vs. average demand
+		\item Lead time and forecast horizon
+	\end{itemize}
+	\vfill
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{forecast}
+		\tiny{Image courtesy of \cite{wen2022robust}.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{From Anomaly Detection to Cause Analysis}
+	\begin{columns}
+		\begin{column}{0.4\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{anomaly}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
 
 %-------------------------------------------------------------------------------
 % Industry perspective for campus hires
@@ -147,9 +228,15 @@
 % Q & A
 %-------------------------------------------------------------------------------
 \section{Q\&A}
-\begin{frame}{}
+\begin{frame}
 	\center
 	\Huge Q \& A
+\end{frame}
+
+\begin{frame}[t,allowframebreaks]
+	\frametitle{References}
+	\tiny
+	\printbibliography
 \end{frame}
 
 \end{document}
