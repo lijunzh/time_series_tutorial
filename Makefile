@@ -13,30 +13,32 @@ SLIDESNAME = slides
 BIBFILES = $(shell find bib -type f -name *.bib)
 
 # targets
-all: slides
-slides: $(SLIDESNAME).pdf
+all: $(SLIDESNAME).pdf
+release: all squeeze
+edit: $(SLIDESNAME).tex
+	$(LATEXMK) $(LATEXOPT) $(CONTINUOUS) $(DEPOPT) $(doc).d $(doc)
 
 # rules
 %.pdf: %.tex $(DOCNAME).bib
-	#$(LATEXMK) $(LATEXOPT) $(DEPOPT) $*.d $*
-	$(LATEXMK) $(LATEXOPT) $*
+	$(LATEXMK) $(LATEXOPT) $(DEPOPT) $*.d $*
 	
 $(DOCNAME).bib:
 	$(BIBTOOL) --preserve.key.case=on --print.deleted.entries=off -q -s -d $(BIBFILES) -o $(DOCNAME).bib
 	
 # cleaning up
-clean: mostlyclean bibclean
+clean: squeeze bibclean
 	$(LATEXMK) -silent -C
-
-mostlyclean:
-	$(LATEXMK) -silent -c
 	$(RM) *.run.xml *.synctex.gz *.nav *.snm
-	#$(RM) *.d
+	$(RM) *.bbl
+	$(RM) *.d
+
+squeeze:
+	$(LATEXMK) -silent -c
 
 bibclean:
 	$(RM) *.bbl *.bib *.blg
 
-.PHONY: all doc clean bibclean mostlyclean force
+.PHONY: all clean squeeze bibclean
 
 # include auto-generated dependencies
-#-include *.d
+-include *.d

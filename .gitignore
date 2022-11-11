@@ -275,5 +275,8 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
+# Dependency
+*.d
+
 # generated pdf
 slides.pdf

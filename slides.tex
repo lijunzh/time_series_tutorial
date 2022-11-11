@@ -84,6 +84,22 @@
 \date{\small\displaydate{date}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Outline at each section
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[] {
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents
+        [
+            currentsection,
+            currentsubsection,
+            subsectionstyle=show/show/hide
+        ]
+        \addtocounter{framenumber}{-1}
+    \end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -155,7 +171,7 @@
 % Time series analysis basics
 %-------------------------------------------------------------------------------
 \section{Time series analysis}
-
+\subsection{What is time series}
 \begin{frame}
 	\frametitle{Time Series is Ubiquitous}
 	\begin{columns}
@@ -216,18 +232,242 @@
 				\includegraphics[width=\columnwidth]{anomaly}
 			\end{figure}
 		\end{column}
+		\hfill
+		\begin{column}{0.55\linewidth}
+			\begin{itemize}
+				\item Time series is predictable since some of its properties are stable, e.g. WSS process
+					\begin{itemize}
+						\item Period
+						\item Mean
+						\item Variance
+						\item Trend
+						\item Distribution
+					\end{itemize}
+				\item Anomaly are the portion of the signal that breaks the previous pattern
+				\item Detection of anomaly is only the first step, the key is the root cause of the anomaly
+				\item Cause analysis leads to new understanding and improved procedure 
+			\end{itemize}
+		\end{column}
 	\end{columns}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Values in time series}
+\begin{frame}
+	\frametitle{Why Time Series (Data Science) Matters?}
+	\large
+	\begin{itemize}
+		\item Data science starts from understanding of observations of physical world / human behaviors
+		\vspace{2mm}
+		\item The impact of these changes (good or bad) is the value of the data science
+			\begin{itemize}
+				\item Improved understanding 
+				\item Make decision and change procedures
+				\item Change future world and behaviors
+			\end{itemize}
+		\vspace{2mm}
+		\item Artificial intelligence in data science is a approach to realize impact
+			\begin{columns}
+				\hspace{13mm}
+				\begin{column}{0.5\linewidth}
+					\begin{itemize}
+						\item signal processing
+						\item statistical analysis
+					\end{itemize}
+				\end{column}
+				\hfill
+				\begin{column}{0.5\linewidth}
+					\begin{itemize}
+						\item machine learning
+						\item deep learning
+					\end{itemize}
+				\end{column}
+			\end{columns}
+		\vspace{2mm}
+		\item Only measurble impact is valued in corporative scenario
+			\begin{itemize}
+				\item Indivual evaluation: bonus, reward, and promotion
+				\item Team growth: budget, resource, exposure
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Methods for time series analysis}
+
+\begin{frame}
+	\frametitle{Data Preparation}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Feature Engineering}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Modeling and Experiments}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Visualization and Validation}
+	
 \end{frame}
 
 %-------------------------------------------------------------------------------
 % Industry perspective for campus hires
 %-------------------------------------------------------------------------------
 \section{Industry perspective}
+\subsection{Job market demands}
+\begin{frame}
+	\frametitle{Roles in my group}
+	\begin{itemize}
+		\item<1> Data Scientists (DS)
+			\begin{itemize}
+				\item Convert business problem to a data science problem
+				\item Feature engineering, model design, system validation
+				\item Visualization and communication to business partners
+			\end{itemize}
+		\item<2> Data Engineers (DE)
+			\begin{itemize}
+				\item Work with data stakeholder to collect and store data
+				\item Clean up dataset and make it available for data science and engineering teams
+				\item Build data pipeline to automate regular data update and monitor data drift
+			\end{itemize}
+		\item<3> Machine Learning Engineers (MLE)
+			\begin{itemize}
+				\item Build cloud/software infrastructures to support data science products
+				\item Improve model effectiveness and efficiency (new models and tools)
+				\item Maintain production ready system and long-term support of data science products
+			\end{itemize}
+		\item<4> Software Development Engineers (SWE)
+			\begin{itemize}
+				\item Work with business partner to define data science product
+				\item Set requirements and acceptance criteria to data science and engineering teams
+				\item Communicate data science and engineer teams' success and limitation
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Other related roles}
+	\begin{itemize}
+		\item<1> Technical Product Managers (TPM)
+			\begin{itemize}
+				\item Work with business partner to define data science product
+				\item Set requirements and acceptance criteria to data science and engineering teams
+				\item Communicate data science and engineer teams' success and limitation
+			\end{itemize}
+			\vspace{5mm}
+		\item<2> Data Analytics
+			\begin{itemize}
+				\item Conduct A/B tests to measure the effectiveness of data science product
+				\item Visualization and reporting of efficiency analysis
+			\end{itemize}
+			\vspace{5mm}
+		\item<3> UI/UX desginers
+			\begin{itemize}
+				\item Work with business team to identify the requirements for user interface
+				\item Collaborate with data science team to provide necessary data for the interface
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Data Scientists (DS)}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Data Engineers (DE)}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Machine Learning Engineers (MLE)}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Software Development Engineers (SWE)}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\subsection{A product driving perspective}
+
+\begin{frame}
+	\frametitle{Product is your best Testimony}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Product is the driving force behind innovation}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\subsection{A growth mindset}
+
+\begin{frame}
+	\frametitle{The Manager's Path (\cite{fournier2017manager})}
+	\begin{columns}
+		\begin{column}{0.7\linewidth}
+			\begin{itemize}
+				\item Establish your technical competence as an individual contributer (IC)
+				\item Avance and try out management as tech lead
+				\item People Manager (PM) is not a promotion but a different job
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.3\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{manager}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Zero to One (\cite{thiel2014zero})}
+	\begin{columns}
+		\begin{column}{0.7\linewidth}
+			\begin{itemize}
+				\item In the long run, innovation is the most important driving force behind economies
+				\item Today's best practice leads to dead ends
+					\begin{itemize}
+						\item You need to be different to be better (Bose)
+						\item Fail and fail fast (MSR)
+					\end{itemize}
+				\item Find values in unexpected places
+					\begin{itemize}
+						\item Thinking about first principles instead of formulas
+						\item Nothing worth learning can be taught
+					\end{itemize}
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.3\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{zero}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+% Summary
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Summary}
+	\tableofcontents
+\end{frame}
 
 %-------------------------------------------------------------------------------
 % Q & A
 %-------------------------------------------------------------------------------
-\section{Q\&A}
 \begin{frame}
 	\center
 	\Huge Q \& A
