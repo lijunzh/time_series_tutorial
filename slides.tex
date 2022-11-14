@@ -235,7 +235,7 @@
 		\hfill
 		\begin{column}{0.55\linewidth}
 			\begin{itemize}
-				\item Time series is predictable since some of its properties are stable, e.g. WSS process
+				\item<1> Time series is predictable since some of its properties are stable, e.g. WSS process
 					\begin{itemize}
 						\item Period
 						\item Mean
@@ -243,9 +243,9 @@
 						\item Trend
 						\item Distribution
 					\end{itemize}
-				\item Anomaly are the portion of the signal that breaks the previous pattern
-				\item Detection of anomaly is only the first step, the key is the root cause of the anomaly
-				\item Cause analysis leads to new understanding and improved procedure 
+				\item<1> Anomaly are the portion of the signal that breaks the previous pattern
+				\item<2> Detection of anomaly is only the first step, the key is the root cause of the anomaly
+				\item<2> Cause analysis leads to new understanding and improved procedure
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -258,34 +258,31 @@
 	\frametitle{Why Time Series (Data Science) Matters?}
 	\large
 	\begin{itemize}
-		\item Data science starts from understanding of observations of physical world / human behaviors
+		\item<1> Data science starts from understanding of observations of physical world / human behaviors
 		\vspace{2mm}
-		\item The impact of these changes (good or bad) is the value of the data science
+		\item<1> The impact of changes due to the improved understanding is the value of the data science
 			\begin{itemize}
 				\item Improved understanding 
 				\item Make decision and change procedures
 				\item Change future world and behaviors
 			\end{itemize}
 		\vspace{2mm}
-		\item Artificial intelligence in data science is a approach to realize impact
-			\begin{columns}
-				\hspace{13mm}
-				\begin{column}{0.5\linewidth}
+		\item<2> Artificial intelligence in data science is a approach to realize impact
+				\begin{minipage}{0.48\linewidth}
 					\begin{itemize}
 						\item signal processing
 						\item statistical analysis
 					\end{itemize}
-				\end{column}
+				\end{minipage}
 				\hfill
-				\begin{column}{0.5\linewidth}
+				\begin{minipage}{0.5\linewidth}
 					\begin{itemize}
 						\item machine learning
 						\item deep learning
 					\end{itemize}
-				\end{column}
-			\end{columns}
+				\end{minipage}
 		\vspace{2mm}
-		\item Only measurble impact is valued in corporative scenario
+		\item<3> Only measurble impact is valued in corporative scenario
 			\begin{itemize}
 				\item Indivual evaluation: bonus, reward, and promotion
 				\item Team growth: budget, resource, exposure
@@ -299,7 +296,38 @@
 
 \begin{frame}
 	\frametitle{Data Preparation}
-	
+	\begin{columns}
+		\begin{column}{0.7\linewidth}
+			\begin{itemize}
+				\item<1> Gathering data is the first (most important) step
+					\begin{itemize}
+						\only\item Garbage in, Garbage out 
+						\item Data integrity, data completeness
+					\end{itemize}
+				\vspace{3mm}
+				\item<2> Identify and collect the proper dataset
+					\begin{itemize}
+						\item Work with business stakeholder to collect data sources
+						\item Collect, validate, and clean up the source tables
+						\item Build a data pipeline and monitor for data drifting
+					\end{itemize}
+				\vspace{3mm}
+				\item<3> Make the prepared data available
+					\begin{itemize}
+						\item Write an API or use existing data API (BigQuery, DeltaLake, etc.)
+						\item Document the details of the dataset for data discovery
+						\item Periodically review the quality of the source data
+					\end{itemize}
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.3\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{data_collect}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
