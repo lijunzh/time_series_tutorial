@@ -38,7 +38,7 @@ squeeze:
 bibclean:
 	$(RM) *.bbl *.bib *.blg
 
-.PHONY: all clean squeeze bibclean
+.PHONY: all clean squeeze bibclean edit
 
 # include auto-generated dependencies
 -include *.d
