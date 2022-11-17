@@ -332,18 +332,85 @@
 
 \begin{frame}
 	\frametitle{Feature Engineering}
-	
+	\begin{itemize}
+		\item<1> Traiditional Feature Engineering
+			\begin{itemize}
+				\item Summarized by experts with domain knowledge from small training sets
+				\item Take advantage of years of experience and knowledges, e.g. spacetral analysis: FFT
+				\item Limited by our current understanding and observations
+				\item More effective for complex system with a few dominant factors, e.g. long-term demand forecast
+			\end{itemize}
+		\item<2> Deep learning features (encoder-decoder architecture)
+			\begin{itemize}
+				\item Model learned from large amount of labeled data
+				\item Open-endded data exploration guided by model structures
+				\item Limited by volume of available labeled training data
+				\item More effective for simple system with no obvious dominant factors, e.g. CV, NLP
+			\end{itemize}
+		\item<3> In reality, we have a mix of both in one complex system
+			\begin{itemize}
+				\item A hetergeneous learning system
+				\item Connected machine intelligence of different small system (divide and conquer)
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Modeling and Experiments}
-	
+	\begin{itemize}
+		\item<1> Counter-intuitively, modeling is the least important part of enterprice pipelines
+		\item<1> A collection of good enough off-the-shelf model to choose from
+			\begin{itemize}
+				\item ARIMA model (AutoRegression Integrated Moving Average), and its variations: VARIMA, SARIMA, FARIMA
+				\item Exponential smoothing models: Holt-Winters, Lewandowski model
+				\item Regression models: Facebook Prophet
+				\item Deep learning: Amazon DeepAR model, Transformer models, DNN models
+			\end{itemize}
+			\vspace{3mm}
+		\item<2> Focus on the use case and business value the model brings
+			\begin{itemize}
+				\item Model predicts at the right granularity the business use cases need
+				\item Model has enough transparency required by the compliance 
+					\begin{itemize}
+						\item feature significance
+						\item confidence intervals
+					\end{itemize}
+				\item Model training/inference can be completed in an efficient manner 
+					\begin{itemize}
+						\item Execution time
+						\item Computation cost
+					\end{itemize}
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Visualization and Validation}
-	
+	\frametitle{Data Visualization and Model Measurement}
+	\begin{columns}
+		\begin{column}{0.3\linewidth}
+			\begin{itemize}
+				\item Mark differences
+					\vspace{5mm}
+				\item Tell a story
+					\vspace{5mm}
+				\item Make an impact
+					\vspace{5mm}
+				\item Quantify success
+					\vspace{5mm}
+				\item Monitor metrics
+			\end{itemize}
+		\end{column}
+		\hfill
+		\begin{column}{0.7\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\columnwidth]{data_visualization}
+				\tiny \url{https://www.powerslide.io/en/blog/data-visualisation-what-you-need-to-know}
+			\end{figure}
+		\end{column}
+	\end{columns}
 \end{frame}
+
 
 %-------------------------------------------------------------------------------
 % Industry perspective for campus hires
@@ -371,7 +438,7 @@
 				\item Improve model effectiveness and efficiency (new models and tools)
 				\item Maintain production ready system and long-term support of data science products
 			\end{itemize}
-		\item<4> Software Development Engineers (SWE)
+		\item<4> Software Development Engineers (SDE)
 			\begin{itemize}
 				\item Work with business partner to define data science product
 				\item Set requirements and acceptance criteria to data science and engineering teams
@@ -406,6 +473,24 @@
 
 \begin{frame}
 	\frametitle{Data Scientists (DS)}
+	\begin{itemize}
+		\item Data scientist is the owner of the product
+			\begin{itemize}
+				\item Help the product to define product and make measurement of success (PM)
+				\item Design and implement data science models and pipeline (DS \& MLE)
+				\item Assist in product delivery, maintenance, and update of the pipeline (DE \& SDE)
+			\end{itemize}
+		\item Data scientist is the driver of adoption
+			\begin{itemize}
+				\item Convey business value to business team (PM)
+				\item Measure impact of the product (DA)
+			\end{itemize}
+	\end{itemize}
+	\vfill
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{data_scientist}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -417,7 +502,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Software Development Engineers (SWE)}
+	\frametitle{Software Development Engineers (SDE)}
 \end{frame}
 
 %-------------------------------------------------------------------------------

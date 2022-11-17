@@ -29,7 +29,6 @@ $(DOCNAME).bib:
 clean: squeeze bibclean
 	$(LATEXMK) -silent -C
 	$(RM) *.run.xml *.synctex.gz *.nav *.snm
-	$(RM) *.bbl
 	$(RM) *.d
 
 squeeze:
