@@ -126,7 +126,7 @@
 			\item Lijun Zhu, Ph.D.
 				\begin{itemize}
 					\item Machine Learning, Data Science, and Signal Processing
-					\item Leading a team of 10-20 DS, DE, MLE, and SWE
+					\item Leading a team of 10-20 DS, DE, MLE, and SDE
 					\item Previous experience in internship, Co-op, IC, and PM
 				\end{itemize}
 			\item Sam's Club Data Science and Engineering
@@ -160,6 +160,23 @@
 			\end{figure}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Disclosures}
+	\begin{itemize}
+		\item Nothing worth learning can be taught
+			\begin{itemize}
+				\item Not here to teach but to communicate
+				\item Interactive session, questions/discussion are welcomed any time
+			\end{itemize}
+			\vspace{1cm}
+		\item Nothing specific about Walmart or Sam's Club will be discussed
+			\begin{itemize}
+				\item No insider information about the company
+				\item No specific data/project/product will be discussed
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -333,23 +350,23 @@
 \begin{frame}
 	\frametitle{Feature Engineering}
 	\begin{itemize}
-		\item<1> Traiditional Feature Engineering
+		\item<1> Traditional Feature Engineering
 			\begin{itemize}
 				\item Summarized by experts with domain knowledge from small training sets
-				\item Take advantage of years of experience and knowledges, e.g. spacetral analysis: FFT
+				\item Take advantage of years of experience and knowledges, e.g. spectral analysis: FFT
 				\item Limited by our current understanding and observations
 				\item More effective for complex system with a few dominant factors, e.g. long-term demand forecast
 			\end{itemize}
 		\item<2> Deep learning features (encoder-decoder architecture)
 			\begin{itemize}
 				\item Model learned from large amount of labeled data
-				\item Open-endded data exploration guided by model structures
+				\item Open-ended data exploration guided by model structures
 				\item Limited by volume of available labeled training data
 				\item More effective for simple system with no obvious dominant factors, e.g. CV, NLP
 			\end{itemize}
 		\item<3> In reality, we have a mix of both in one complex system
 			\begin{itemize}
-				\item A hetergeneous learning system
+				\item A heterogeneous learning system
 				\item Connected machine intelligence of different small system (divide and conquer)
 			\end{itemize}
 	\end{itemize}
@@ -358,13 +375,12 @@
 \begin{frame}
 	\frametitle{Modeling and Experiments}
 	\begin{itemize}
-		\item<1> Counter-intuitively, modeling is the least important part of enterprice pipelines
+		\item<1> Counter-intuitively, modeling is the least important part of enterprise pipelines
 		\item<1> A collection of good enough off-the-shelf model to choose from
 			\begin{itemize}
-				\item ARIMA model (AutoRegression Integrated Moving Average), and its variations: VARIMA, SARIMA, FARIMA
-				\item Exponential smoothing models: Holt-Winters, Lewandowski model
-				\item Regression models: Facebook Prophet
-				\item Deep learning: Amazon DeepAR model, Transformer models, DNN models
+				\item Smoothing: Holt-Winters (\cite{winters1960forecasting}), Lewandowski model (JDA proprietary)
+				\item Regression: ARIMA (\cite{ho1998use}), Prophet (\cite{taylor2018forecasting})
+				\item Deep learning: Amazon DeepAR (\cite{salinas2020deepar}), Transformer, GNN
 			\end{itemize}
 			\vspace{3mm}
 		\item<2> Focus on the use case and business value the model brings
@@ -391,7 +407,7 @@
 			\begin{itemize}
 				\item Mark differences
 					\vspace{5mm}
-				\item Tell a story
+				\item Tell a story (ClubIQ)
 					\vspace{5mm}
 				\item Make an impact
 					\vspace{5mm}
@@ -472,17 +488,17 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Data Scientists (DS)}
+	\frametitle{DS, MLE, and SDE}
 	\begin{itemize}
-		\item Data scientist is the owner of the product
+		\item Owner of the product from end to end
 			\begin{itemize}
 				\item Help the product to define product and make measurement of success (PM)
 				\item Design and implement data science models and pipeline (DS \& MLE)
 				\item Assist in product delivery, maintenance, and update of the pipeline (DE \& SDE)
 			\end{itemize}
-		\item Data scientist is the driver of adoption
+		\item Driver of the product adoption
 			\begin{itemize}
-				\item Convey business value to business team (PM)
+				\item Convey business value to business team (TPM)
 				\item Measure impact of the product (DA)
 			\end{itemize}
 	\end{itemize}
@@ -495,14 +511,23 @@
 
 \begin{frame}
 	\frametitle{Data Engineers (DE)}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Machine Learning Engineers (MLE)}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Software Development Engineers (SDE)}
+	\begin{itemize}
+		\item Owner of the data pipeline infrastructures
+			\begin{itemize}
+				\item Implement and maintain data pipeline for batch or real-time access
+				\item Monitor for potential data drift and data quality issues
+			\end{itemize}
+		\item Governer of the data access and compliance
+			\begin{itemize}
+				\item Grant and track access control of data source
+				\item Meet government and company compliance for data access and usage
+			\end{itemize}
+	\end{itemize}
+	\vfill
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{data_engineer}
+	\end{figure}
 \end{frame}
 
 %-------------------------------------------------------------------------------
@@ -511,10 +536,43 @@
 
 \begin{frame}
 	\frametitle{Product is your best Testimony}
+	\begin{itemize}
+		\item<1> Budget is granted on specific product but not technology
+			\begin{itemize}
+				\item Team is formed to ensure the success of a specific product
+				\item People with background around similar technologies are put into a group
+				\item End goal is for efficiency but not necessary technology advance
+			\end{itemize}
+			\vspace{5mm}
+		\item<2> Success is measured via the business impact the products brings
+			\begin{itemize}
+				\item Understand what is the value your product brings to the team
+				\item Quantify your measurement in unit of dollar when possible
+			\end{itemize}
+			\vspace{5mm}
+		\item<3> Trade offs and hard decisions
+			\begin{itemize}
+				\item Re-privatization happens frequently
+				\item Products with more business impact are bring to the front
+			\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Product is the driving force behind innovation}
+	\begin{itemize}
+		\item Product-centric vs. customer-centric
+		\item Make a product that you are proud of
+			\begin{itemize}
+				\item Innovation is a by-product solving hard problems while making the product
+				\item Stay connected with academia and on top of the latest breakthroughs
+			\end{itemize}
+	\end{itemize}
+	\vfill
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{product_customer}
+	\end{figure}
 \end{frame}
 
 %-------------------------------------------------------------------------------
@@ -526,9 +584,15 @@
 	\begin{columns}
 		\begin{column}{0.7\linewidth}
 			\begin{itemize}
-				\item Establish your technical competence as an individual contributer (IC)
-				\item Avance and try out management as tech lead
-				\item People Manager (PM) is not a promotion but a different job
+				\item Explore your interests and establish your technical competence as an individual contributor
+					\vspace{5mm}
+				\item Advance and try out management as tech lead
+				\item People Manager is not a promotion but a different job
+					\vspace{5mm}
+				\item Be the leader of innovation, technical or management
+				\item Climb the tech ladder is interesting and rewarding
+					\vspace{5mm}
+				\item Don't be afraid of switching your career path to align with your passion
 			\end{itemize}
 		\end{column}
 		\hfill
@@ -547,11 +611,13 @@
 		\begin{column}{0.7\linewidth}
 			\begin{itemize}
 				\item In the long run, innovation is the most important driving force behind economies
+					\vspace{8mm}
 				\item Today's best practice leads to dead ends
 					\begin{itemize}
 						\item You need to be different to be better (Bose)
 						\item Fail and fail fast (MSR)
 					\end{itemize}
+					\vspace{8mm}
 				\item Find values in unexpected places
 					\begin{itemize}
 						\item Thinking about first principles instead of formulas
@@ -567,6 +633,28 @@
 			\end{figure}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reflection on recent macro economy changes}
+	\begin{itemize}
+		\item Cyclic nature of business, contraction follows expansion
+			\begin{itemize}
+				\item Industrial cycles, e.g. Oil and gas, semiconductor, agriculture
+				\item Domestic and international market cycles
+			\end{itemize}
+		\item Growth happened in the downturn and harvested in the upturn (Amazon)
+			\begin{itemize}
+				\item Study and get a relevant degree for next upturn
+				\item Gain experience and connections (my intern story)
+				\item Pursue your own idea by starting a company
+			\end{itemize}
+	\end{itemize}
+	\vfill
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\linewidth]{business_cycles}
+	\end{figure}
 \end{frame}
 
 %-------------------------------------------------------------------------------
